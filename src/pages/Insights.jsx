@@ -1,10 +1,10 @@
 import React from 'react'
-
+import Page from "@/components/Page";
 const Insights = () => {
   return (
-    <div>
-      Insights
-    </div>
+    <Page title={"Insights"}>
+      <p>Analytics and learning insights.</p>
+    </Page>
   )
 }
 

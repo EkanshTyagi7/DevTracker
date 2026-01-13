@@ -1,10 +1,11 @@
 import React from 'react'
+import Page from "@/components/Page";
 
 const Settings = () => {
   return (
-    <div>
-      Settings
-    </div>
+    <Page title={"Settings"}>
+      <p>Application preferences.</p>
+    </Page>
   )
 }
 
