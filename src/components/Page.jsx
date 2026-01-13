@@ -2,9 +2,9 @@ import React from 'react'
 
 const Page = ({title,children}) => {
   return (
-    <div>
-      <h2 className='text-2xl font-semibold'>{title}</h2>
-      <div>{children}</div>
+    <div className='gap-0.5'>
+      <h2 className='text-3xl font-bold'>{title}</h2>
+      <div className='text-[#70698F] font-medium'>{children}</div>
     </div>
   )
 }
