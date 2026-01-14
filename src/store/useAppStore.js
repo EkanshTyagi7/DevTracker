@@ -42,7 +42,7 @@ const useAppStore = create(() => ({
               id: 2002,
               title: "useEffect",
               status: "revising",
-              confidence: 3,
+              confidence: 2,
               lastStudiedAt: null,
             },
           ],

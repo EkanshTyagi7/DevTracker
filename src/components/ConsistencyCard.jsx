@@ -4,7 +4,8 @@ import Card from "./Card";
 const ConsistencyCard = () => {
   return (
     <Card title="Consistency Snapshot">
-      Your learning streak and weekly consistency will appear here.
+      <p>Learning streak: 3 days</p>
+      <p className="text-xs text-zinc-500">(Will be dynamic in Phase 3)</p>
     </Card>
   );
 };

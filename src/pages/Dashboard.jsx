@@ -4,17 +4,27 @@ import Page from "@/components/Page";
 import TodayFocusCard from "@/components/TodayFocusCard";
 import WeakAreasCard from "@/components/WeakAreasCard";
 import React from "react";
+import useAppStore from "@/store/useAppStore";
+import {
+  getAllTopics,
+  getActiveTopics,
+  getWeakTopics,
+  getRoadmapProgress,
+} from "@/store/selectors";
 
 const Dashboard = () => {
+  const roadmaps=useAppStore((state)=>state.roadmaps)
+  const activetopics=getActiveTopics(roadmaps)
+  const weaktopics=getWeakTopics(roadmaps)
   return (
     <div className="flex flex-col gap-6">
       <Page title={"Dashboard"}>
         <p> Overview of your learning progress.</p>
       </Page>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-        <TodayFocusCard />
-        <ActiveRoadmapsCard />
-        <WeakAreasCard />
+        <TodayFocusCard topics={activetopics}/>
+        <ActiveRoadmapsCard roadmaps={roadmaps} />
+        <WeakAreasCard topics={weaktopics} />
         <ConsistencyCard />
       </div>
     </div>
